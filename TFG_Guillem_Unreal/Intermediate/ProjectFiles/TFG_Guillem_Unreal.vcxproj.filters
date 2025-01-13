@@ -39,5 +39,29 @@
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\TFG_Guillem_Unreal.h">
       <Filter>Source\TFG_Guillem_Unreal</Filter>
     </ClCompile>
+    <Filter Include="Source\TFG_Guillem_Unreal\Private">
+      <UniqueIdentifier>{3EB113BF-D148-3ED7-97CC-DF869E89D118}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ActorPlataforma.cpp">
+      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ActorRoda.cpp">
+      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ProvaVehicle.cpp">
+      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ProvaVehicle.h">
+      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\TFG_Guillem_Unreal\Public">
+      <UniqueIdentifier>{8D079360-D8C6-33BE-908A-C1B1FEC1B42F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ActorPlataforma.h">
+      <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ActorRoda.h">
+      <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
