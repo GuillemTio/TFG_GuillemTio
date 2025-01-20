@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesAActorRoda(); \
 	friend struct Z_Construct_UClass_AActorRoda_Statics; \
 public: \
-	DECLARE_CLASS(AActorRoda, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TFG_Guillem_Unreal"), NO_API) \
+	DECLARE_CLASS(AActorRoda, ANonActivableActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TFG_Guillem_Unreal"), NO_API) \
 	DECLARE_SERIALIZER(AActorRoda)
 
 

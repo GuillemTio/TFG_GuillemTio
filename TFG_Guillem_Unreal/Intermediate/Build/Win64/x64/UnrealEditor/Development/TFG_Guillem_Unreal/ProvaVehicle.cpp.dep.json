@@ -17,7 +17,11 @@
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\actorplataforma.h",
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\actorplataforma.generated.h",
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\actorroda.h",
-            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\actorroda.generated.h"
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\actorroda.generated.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\plataformacomponent.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\plataformacomponent.generated.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\rodacomponent.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\rodacomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

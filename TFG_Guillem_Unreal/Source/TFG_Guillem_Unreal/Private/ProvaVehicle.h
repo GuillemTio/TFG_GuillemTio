@@ -29,7 +29,7 @@ class AProvaVehicle : public AActor
 	UPROPERTY(VisibleAnywhere, Category = "Vehicle")
 	TArray<UPhysicsConstraintComponent*> Constraints;
 
-	void AddConstraint(AActor* actorA, AActor* actorB);
+	void AddConstraint(USceneComponent* actorCompA, USceneComponent* actorCompB);
 	
 public:	
 	// Sets default values for this actor's properties

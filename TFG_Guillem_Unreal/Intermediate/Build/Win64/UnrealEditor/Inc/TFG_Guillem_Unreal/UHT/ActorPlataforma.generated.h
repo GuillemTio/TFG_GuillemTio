@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesAActorPlataforma(); \
 	friend struct Z_Construct_UClass_AActorPlataforma_Statics; \
 public: \
-	DECLARE_CLASS(AActorPlataforma, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TFG_Guillem_Unreal"), NO_API) \
+	DECLARE_CLASS(AActorPlataforma, ANonActivableActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TFG_Guillem_Unreal"), NO_API) \
 	DECLARE_SERIALIZER(AActorPlataforma)
 
 

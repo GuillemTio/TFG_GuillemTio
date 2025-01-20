@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "NonActivableActor.h"
 #include "ActorRoda.generated.h"
 
 UCLASS()
-class TFG_GUILLEM_UNREAL_API AActorRoda : public AActor
+class TFG_GUILLEM_UNREAL_API AActorRoda : public ANonActivableActor
 {
 	GENERATED_BODY()
 

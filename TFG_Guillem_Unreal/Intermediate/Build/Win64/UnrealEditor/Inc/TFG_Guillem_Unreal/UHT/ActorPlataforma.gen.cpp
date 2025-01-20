@@ -10,10 +10,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeActorPlataforma() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_AActorPlataforma();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_AActorPlataforma_NoRegister();
+TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_ANonActivableActor();
 UPackage* Z_Construct_UPackage__Script_TFG_Guillem_Unreal();
 // End Cross Module References
 
@@ -53,7 +53,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AActorPla
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AActorPlataforma_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AActorPlataforma_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AActor,
+	(UObject* (*)())Z_Construct_UClass_ANonActivableActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_TFG_Guillem_Unreal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AActorPlataforma_Statics::DependentSingletons) < 16);
@@ -92,10 +92,10 @@ AActorPlataforma::~AActorPlataforma() {}
 struct Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorPlataforma_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AActorPlataforma, AActorPlataforma::StaticClass, TEXT("AActorPlataforma"), &Z_Registration_Info_UClass_AActorPlataforma, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActorPlataforma), 3624801704U) },
+		{ Z_Construct_UClass_AActorPlataforma, AActorPlataforma::StaticClass, TEXT("AActorPlataforma"), &Z_Registration_Info_UClass_AActorPlataforma, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActorPlataforma), 2072739010U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorPlataforma_h_3905901509(TEXT("/Script/TFG_Guillem_Unreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorPlataforma_h_3888704858(TEXT("/Script/TFG_Guillem_Unreal"),
 	Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorPlataforma_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorPlataforma_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

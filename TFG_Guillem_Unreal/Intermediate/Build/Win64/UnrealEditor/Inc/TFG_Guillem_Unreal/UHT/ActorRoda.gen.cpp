@@ -10,10 +10,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeActorRoda() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_AActorRoda();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_AActorRoda_NoRegister();
+TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_ANonActivableActor();
 UPackage* Z_Construct_UPackage__Script_TFG_Guillem_Unreal();
 // End Cross Module References
 
@@ -53,7 +53,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AActorRod
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AActorRoda_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AActorRoda_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AActor,
+	(UObject* (*)())Z_Construct_UClass_ANonActivableActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_TFG_Guillem_Unreal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AActorRoda_Statics::DependentSingletons) < 16);
@@ -92,10 +92,10 @@ AActorRoda::~AActorRoda() {}
 struct Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorRoda_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AActorRoda, AActorRoda::StaticClass, TEXT("AActorRoda"), &Z_Registration_Info_UClass_AActorRoda, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActorRoda), 2246497401U) },
+		{ Z_Construct_UClass_AActorRoda, AActorRoda::StaticClass, TEXT("AActorRoda"), &Z_Registration_Info_UClass_AActorRoda, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActorRoda), 2310189301U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorRoda_h_2080931263(TEXT("/Script/TFG_Guillem_Unreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorRoda_h_3234535888(TEXT("/Script/TFG_Guillem_Unreal"),
 	Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorRoda_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_ActorRoda_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
