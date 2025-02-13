@@ -3,3 +3,7 @@
 
 #include "NonActivableActor.h"
 
+void ANonActivableActor::Connect()
+{
+	Super::Connect();
+}

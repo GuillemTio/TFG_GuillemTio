@@ -45,12 +45,6 @@
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ActivableActor.cpp">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ActorPlataforma.cpp">
-      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ActorRoda.cpp">
-      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\AttachableActor.cpp">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
@@ -60,7 +54,7 @@
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\NonActivableActor.cpp">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\PlataformaComponent.cpp">
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\PlatformActor.cpp">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ProvaVehicle.cpp">
@@ -69,19 +63,16 @@
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ProvaVehicle.h">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\RodaComponent.cpp">
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\ThrusterActor.cpp">
+      <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Private\WheelActor.cpp">
       <Filter>Source\TFG_Guillem_Unreal\Private</Filter>
     </ClCompile>
     <Filter Include="Source\TFG_Guillem_Unreal\Public">
       <UniqueIdentifier>{8D079360-D8C6-33BE-908A-C1B1FEC1B42F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ActivableActor.h">
-      <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ActorPlataforma.h">
-      <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ActorRoda.h">
       <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\AttachableActor.h">
@@ -93,10 +84,13 @@
     <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\NonActivableActor.h">
       <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\PlataformaComponent.h">
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\PlatformActor.h">
       <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\RodaComponent.h">
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\ThrusterActor.h">
+      <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TFG_Guillem_Unreal\Public\WheelActor.h">
       <Filter>Source\TFG_Guillem_Unreal\Public</Filter>
     </ClCompile>
   </ItemGroup>

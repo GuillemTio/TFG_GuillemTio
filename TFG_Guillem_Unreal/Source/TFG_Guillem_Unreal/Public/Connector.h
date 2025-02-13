@@ -3,26 +3,31 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
+#include "UObject/NoExportTypes.h"
+#include <PhysicsEngine/PhysicsConstraintComponent.h>
 #include "Connector.generated.h"
 
-
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TFG_GUILLEM_UNREAL_API UConnector : public USceneComponent
+class AAttachableActor;
+/**
+ * 
+ */
+UCLASS()
+class TFG_GUILLEM_UNREAL_API UConnector : public UObject
 {
 	GENERATED_BODY()
 
-public:	
-	// Sets default values for this component's properties
-	UConnector();
+private: 
+	bool isExternal; 
 
-protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
+	UPhysicsConstraintComponent* constraint;
+	
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+public: 
+	AAttachableActor* actorOwner;
 
-		
+	void SetConnector(bool isConnectorExternal, AAttachableActor& attachableActor);
+	bool GetIsExternal();
+
+	void AttachTo(UConnector* attachableActor);
+	
 };

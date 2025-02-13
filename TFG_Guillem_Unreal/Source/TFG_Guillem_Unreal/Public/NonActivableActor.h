@@ -13,5 +13,8 @@ UCLASS()
 class TFG_GUILLEM_UNREAL_API ANonActivableActor : public AAttachableActor
 {
 	GENERATED_BODY()
+
+protected:
+	virtual void Connect() override;
 	
 };

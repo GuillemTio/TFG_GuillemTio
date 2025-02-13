@@ -2,10 +2,9 @@
 
 
 #include "ProvaVehicle.h"
-#include "ActorPlataforma.h"
-#include "ActorRoda.h"
-#include "PlataformaComponent.h"
-#include "RodaComponent.h"
+#include "PlatformActor.h"
+#include "WheelActor.h"
+
 
 
 
@@ -20,9 +19,6 @@ AProvaVehicle::AProvaVehicle()
 	//PlatformComponent->SetChildActorClass(AActorPlataforma::StaticClass());
 	
 	//Add(basePlatform, wheel1);
-
-	UPlataformaComponent::StaticClass(); //si funciona, hauria de ser un a funcio que fa els constructors de tots els comps
-	URodaComponent::StaticClass();
 
 }
 
@@ -46,41 +42,11 @@ void AProvaVehicle::BeginPlay()
 	//AActorRoda* wheel4 = GetWorld()->SpawnActor<AActorRoda>(AActorRoda::StaticClass(), startPosition + FVector(-90.0, -90.0, 180.0),
 	//	FRotator(0.0, 0.0, 0.0));
 
-	UPlataformaComponent* basePlatform = NewObject<UPlataformaComponent>(this, UPlataformaComponent::StaticClass(), TEXT("PlatformComponent"));
-	basePlatform->RegisterComponent();
-	basePlatform->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	basePlatform->SetWorldLocation(basePlatform->GetComponentLocation() + startPosition);
 
-	URodaComponent* wheel1 = NewObject<URodaComponent>(this, URodaComponent::StaticClass(), TEXT("Roda1"));
-	wheel1->RegisterComponent();
-	wheel1->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	wheel1->SetWorldLocation(basePlatform->GetComponentLocation() + startPosition);
-	
-	URodaComponent* wheel2 = NewObject<URodaComponent>(this, URodaComponent::StaticClass(), TEXT("Roda2"));
-	wheel2->RegisterComponent();
-	wheel2->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	wheel2->SetWorldLocation(basePlatform->GetComponentLocation() + startPosition);
-
-	URodaComponent* wheel3 = NewObject<URodaComponent>(this, URodaComponent::StaticClass(), TEXT("Roda3"));
-	wheel3->RegisterComponent();
-	wheel3->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	wheel3->SetWorldLocation(basePlatform->GetComponentLocation() + startPosition);
-
-	URodaComponent* wheel4 = NewObject<URodaComponent>(this, URodaComponent::StaticClass(), TEXT("Roda4"));
-	wheel4->RegisterComponent();
-	wheel4->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	wheel4->SetWorldLocation(basePlatform->GetComponentLocation() + startPosition);
-
-	//basePlatform->AttachComponent(RootComponent);
-	//wheel1->SetupAttachment(RootComponent);
-	//wheel2->SetRootComponent(RootComponent);
-	//wheel3->SetRootComponent(RootComponent);
-	//wheel4->SetRootComponent(RootComponent);
-
-	AddConstraint(basePlatform, wheel1);
-	AddConstraint(basePlatform, wheel2);
-	AddConstraint(basePlatform, wheel3);
-	AddConstraint(basePlatform, wheel4);
+	//AddConstraint(basePlatform, wheel1);
+	//AddConstraint(basePlatform, wheel2);
+	//AddConstraint(basePlatform, wheel3);
+	//AddConstraint(basePlatform, wheel4);
 
 }
 
@@ -109,7 +75,7 @@ void AProvaVehicle::AddConstraint(USceneComponent* actorCompA, USceneComponent* 
 
 		//pot ser que les posicions es canviin al no ser component, les posicions del const estan fixes pero els actors es van movent
 
-	if(actorCompB->IsA(URodaComponent::StaticClass())){ //aixo hauria de ser un switch i que depenent del component actui diferent
+	if(actorCompB->IsA(AWheelActor::StaticClass())){ //aixo hauria de ser un switch i que depenent del component actui diferent
 		newConstraint->SetLinearXLimit(LCM_Locked, 0.0f);
 		newConstraint->SetLinearYLimit(LCM_Locked, 0.0f);
 		newConstraint->SetLinearZLimit(LCM_Locked, 0.0f);

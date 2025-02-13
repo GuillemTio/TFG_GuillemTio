@@ -14,4 +14,10 @@ class TFG_GUILLEM_UNREAL_API AActivableActor : public AAttachableActor
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual void Connect() override;
+
+public:
+	virtual void Activate();
+
 };

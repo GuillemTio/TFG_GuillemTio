@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TFG_Guillem_UnrealModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+533068f8a84bb9b7fecb0dfaae9feb765f010b52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f2d8b58a72cffad110af9ca770cd23c816e3816")]
 [assembly: System.Reflection.AssemblyProductAttribute("TFG_Guillem_UnrealModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TFG_Guillem_UnrealModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeConnector() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_USceneComponent();
+COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_UConnector();
 TFG_GUILLEM_UNREAL_API UClass* Z_Construct_UClass_UConnector_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TFG_Guillem_Unreal();
@@ -29,9 +29,9 @@ struct Z_Construct_UClass_UConnector_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "BlueprintSpawnableComponent", "" },
-		{ "ClassGroupNames", "Custom" },
-		{ "HideCategories", "Trigger PhysicsVolume" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/**\n * \n */" },
+#endif
 		{ "IncludePath", "Connector.h" },
 		{ "ModuleRelativePath", "Public/Connector.h" },
 	};
@@ -43,13 +43,13 @@ struct Z_Construct_UClass_UConnector_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_UConnector_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_USceneComponent,
+	(UObject* (*)())Z_Construct_UClass_UObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_TFG_Guillem_Unreal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UConnector_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FClassParams Z_Construct_UClass_UConnector_Statics::ClassParams = {
 	&UConnector::StaticClass,
-	"Engine",
+	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
@@ -59,7 +59,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UConnector_Statics::Cla
 	0,
 	0,
 	0,
-	0x00B000A4u,
+	0x001000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UConnector_Statics::Class_MetaDataParams), Z_Construct_UClass_UConnector_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_UConnector()
@@ -74,6 +74,7 @@ template<> TFG_GUILLEM_UNREAL_API UClass* StaticClass<UConnector>()
 {
 	return UConnector::StaticClass();
 }
+UConnector::UConnector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UConnector);
 UConnector::~UConnector() {}
 // End Class UConnector
@@ -82,10 +83,10 @@ UConnector::~UConnector() {}
 struct Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_Connector_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UConnector, UConnector::StaticClass, TEXT("UConnector"), &Z_Registration_Info_UClass_UConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UConnector), 3794816028U) },
+		{ Z_Construct_UClass_UConnector, UConnector::StaticClass, TEXT("UConnector"), &Z_Registration_Info_UClass_UConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UConnector), 157087225U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_Connector_h_135103300(TEXT("/Script/TFG_Guillem_Unreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_Connector_h_3837738310(TEXT("/Script/TFG_Guillem_Unreal"),
 	Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_Connector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_Treball_de_Fi_de_Grau_TFG_GuillemTio_TFG_Guillem_Unreal_Source_TFG_Guillem_Unreal_Public_Connector_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

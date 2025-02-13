@@ -3,3 +3,11 @@
 
 #include "ActivableActor.h"
 
+void AActivableActor::Connect()
+{
+	Super::Connect();
+}
+
+void AActivableActor::Activate()
+{
+}
