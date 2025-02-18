@@ -1,6 +1,6 @@
 
 #include "ThrusterActor.h"
-#include "Connector.h"
+#include "InputConnector.h"
 
 AThrusterActor::AThrusterActor()
 {
@@ -27,15 +27,21 @@ void AThrusterActor::Activate()
 	thruster->Activate();
 }
 
+
 void AThrusterActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Connectors.Add(NewObject<UConnector>(this));
-	Connectors[0]->SetConnector(true, *this);
+	Connectors.Add(NewObject<UInputConnector>(this));
+	Cast<UInputConnector>(Connectors[0])->SetConnector(*this, FVector(5.0, 0.0, 0.0));
 
 
 	//No aniria aqui, vindria activat per input del jugador
 	Activate();
 
+}
+
+void AThrusterActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
+{
+	Connectors[0]->AttachTo(passedConnector, toAttachLocation);
 }

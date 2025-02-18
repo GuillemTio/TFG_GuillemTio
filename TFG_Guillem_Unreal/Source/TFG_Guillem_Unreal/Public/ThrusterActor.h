@@ -22,6 +22,7 @@ public:
 	AThrusterActor();
 
 	virtual void Activate() override;
+	virtual void Connect(UConnector* passedConnector, FVector toAttachLocation) override;
 	
 private:
 	UPhysicsThrusterComponent* thruster;

@@ -1,6 +1,6 @@
 
 #include "WheelActor.h"
-#include "Connector.h"
+#include "InputConnector.h"
 
 AWheelActor::AWheelActor()
 {
@@ -25,8 +25,8 @@ void AWheelActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Connectors.Add(NewObject<UConnector>(this));
-	Connectors[0]->SetConnector(true, *this);
+	Connectors.Add(NewObject<UInputConnector>(this));
+	Cast<UInputConnector>(Connectors[0])->SetConnector(*this, FVector(0.0,5.0,0.0));
 
 }
 
@@ -36,7 +36,7 @@ void AWheelActor::Tick(float DeltaTime)
 
 }
 
-void AWheelActor::Connect()
+void AWheelActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
 {
-	Super::Connect();
+	Connectors[0]->AttachTo(passedConnector, toAttachLocation);
 }

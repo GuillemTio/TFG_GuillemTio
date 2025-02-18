@@ -23,7 +23,6 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	virtual void Connect();
 
 	UPROPERTY(EditAnywhere)
 	int numConnectors;
@@ -31,5 +30,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual void Connect(UConnector* passedConnector, FVector toAttachLocation);
 
 };

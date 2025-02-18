@@ -15,11 +15,11 @@ class TFG_GUILLEM_UNREAL_API APlatformActor : public ANonActivableActor
 	UStaticMeshComponent* PlatformMesh;
 
 	//TEST
-	AAttachableActor* testActorToAttach;
+	/*AAttachableActor* testActorToAttach;
 	AAttachableActor* testActorToAttach2;
 	AAttachableActor* testActorToAttach3;
 	AAttachableActor* testActorToAttach4;
-	AAttachableActor* thrusterToAttach;
+	AAttachableActor* thrusterToAttach;*/
 
 public:
 	APlatformActor();
@@ -27,10 +27,12 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	virtual void Connect() override;
+private:
+	int currentConnector = 0; //HARDCODED
 
 public:
 	virtual void Tick(float DeltaTime) override;
-
+	UFUNCTION(BlueprintCallable)
+	virtual void Connect(UConnector* passedConnector, FVector toAttachLocation) override;
 
 };

@@ -15,12 +15,12 @@ void AAttachableActor::BeginPlay()
 	
 }
 
-void AAttachableActor::Connect()
-{
-}
-
 void AAttachableActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AAttachableActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
+{
 }

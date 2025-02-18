@@ -18,6 +18,7 @@
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\attachableactor.generated.h",
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\nonactivableactor.generated.h",
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\wheelactor.generated.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\inputconnector.h",
             "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\source\\tfg_guillem_unreal\\public\\connector.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
@@ -25,7 +26,8 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
-            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\connector.generated.h"
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\connector.generated.h",
+            "c:\\users\\guillem\\desktop\\uni\\treball de fi de grau\\tfg_guillemtio\\tfg_guillem_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\tfg_guillem_unreal\\uht\\inputconnector.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

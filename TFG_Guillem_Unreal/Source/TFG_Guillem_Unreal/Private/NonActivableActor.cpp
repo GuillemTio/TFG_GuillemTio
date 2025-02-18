@@ -3,7 +3,6 @@
 
 #include "NonActivableActor.h"
 
-void ANonActivableActor::Connect()
+void ANonActivableActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
 {
-	Super::Connect();
 }

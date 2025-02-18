@@ -4,7 +4,7 @@
 #include "PlatformActor.h"
 #include "WheelActor.h"
 #include "ThrusterActor.h"
-#include "Connector.h"
+#include "OutputConnector.h"
 #include <Kismet/GameplayStatics.h>
 
 APlatformActor::APlatformActor()
@@ -32,37 +32,39 @@ void APlatformActor::BeginPlay()
 	Super::BeginPlay();
 
 	//TEST
-	testActorToAttach = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(70.0, 70.0, 0.0),
-	FRotator(0.0, 0.0, 0.0));
-	testActorToAttach2 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(-70.0, 70.0, 0.0),
-		FRotator(0.0, 0.0, 0.0)); 
-	testActorToAttach3 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(70.0, -70.0, 0.0),
-		FRotator(0.0, 0.0, 0.0)); 
-	testActorToAttach4 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(-70.0, -70.0, 0.0),
-		FRotator(0.0, 0.0, 0.0)); 
-	thrusterToAttach = GetWorld()->SpawnActor<AThrusterActor>(AThrusterActor::StaticClass(), GetActorLocation() + FVector(0.0, 120.0, 0.0),
-		FRotator(0.0, 90.0, 0.0));
-
+	//testActorToAttach = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(70.0, 70.0, 0.0),
+	//FRotator(0.0, 0.0, 0.0));
+	//testActorToAttach2 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(-70.0, 70.0, 0.0),
+	//	FRotator(0.0, 0.0, 0.0)); 
+	//testActorToAttach3 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(70.0, -70.0, 0.0),
+	//	FRotator(0.0, 0.0, 0.0)); 
+	//testActorToAttach4 = GetWorld()->SpawnActor<AWheelActor>(AWheelActor::StaticClass(), GetActorLocation() + FVector(-70.0, -70.0, 0.0),
+	//	FRotator(0.0, 0.0, 0.0)); 
+	//thrusterToAttach = GetWorld()->SpawnActor<AThrusterActor>(AThrusterActor::StaticClass(), GetActorLocation() + FVector(0.0, 120.0, 0.0),
+	//	FRotator(0.0, 90.0, 0.0));
 
 	for (size_t i = 0; i < numConnectors; i++)
 	{
-		Connectors.Add(NewObject<UConnector>(this));
-		Connectors[i]->SetConnector(true, *this);
+		Connectors.Add(NewObject<UOutputConnector>(this));
+		Cast<UOutputConnector>(Connectors[0])->SetConnector(*this);
 	}
 
-	Connect();
 }
 
-void APlatformActor::Connect()
+void APlatformActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
 {
-	Super::Connect();
+
+	Connectors[currentConnector]->AttachTo(passedConnector, toAttachLocation);
+	currentConnector++;
+
+	if (currentConnector > Connectors.Max() - 1) currentConnector = 0;
 
 	// Aixo va fora, el player input s'hauria d'encarregar de fer els attach pertinents
-	Connectors[0]->AttachTo(testActorToAttach->Connectors[0]);
-	Connectors[1]->AttachTo(testActorToAttach2->Connectors[0]);
-	Connectors[2]->AttachTo(testActorToAttach3->Connectors[0]);
-	Connectors[3]->AttachTo(testActorToAttach4->Connectors[0]);
-	Connectors[4]->AttachTo(thrusterToAttach->Connectors[0]);
+	//Connectors[0]->AttachTo(testActorToAttach->Connectors[0]);
+	//Connectors[1]->AttachTo(testActorToAttach2->Connectors[0]);
+	//Connectors[2]->AttachTo(testActorToAttach3->Connectors[0]);
+	//Connectors[3]->AttachTo(testActorToAttach4->Connectors[0]);
+	//Connectors[4]->AttachTo(thrusterToAttach->Connectors[0]);
 }
 
 void APlatformActor::Tick(float DeltaTime)

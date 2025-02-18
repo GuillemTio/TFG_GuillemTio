@@ -3,9 +3,8 @@
 
 #include "ActivableActor.h"
 
-void AActivableActor::Connect()
+void AActivableActor::Connect(UConnector* passedConnector, FVector toAttachLocation)
 {
-	Super::Connect();
 }
 
 void AActivableActor::Activate()
